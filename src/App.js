@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import CodeBlock from "./components/CodeBlock/CodeBlock";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component() {
+  state = {
+    pages: ["CodeBlock", "TodoList"],
+  };
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>React Starter - React Components Practice</h2>
+          <a
+            class="code-link"
+            target="blank"
+            href="https://github.com/santhoshsoundar/react-comp-prac"
+          >
+            {"<GitHub>"}
+          </a>
+        </header>
+        <div className="content">
+          {/* <CodeBlock /> */}
+          <div className="pages-panel">
+            {/* {pages.map((this.page) => (
+              <span className="page-highlight">{page}</span>
+            ))} */}
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
